@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['readme',['README',['../md_README.html',1,'']]],
   ['repositoryname',['RepositoryName',['../classcpplint_1_1FileInfo.html#a2b3b79b7d46221a6b9d0ea0bebac2061',1,'cpplint::FileInfo']]],
   ['reseterrorcounts',['ResetErrorCounts',['../classcpplint_1_1__CppLintState.html#ab802596abd5fba5e290e090388b6842a',1,'cpplint::_CppLintState']]],
   ['resetsection',['ResetSection',['../classcpplint_1_1__IncludeState.html#a31551f83fcc626e7babb1581a486b6fa',1,'cpplint::_IncludeState']]],
