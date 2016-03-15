@@ -3,3 +3,5 @@ powerlint
 lineReader
 cpplint.py
 output.dat
+*.o
+power_driver
