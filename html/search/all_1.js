@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['addfilters',['AddFilters',['../classcpplint_1_1__CppLintState.html#a248c70895572f2468d3c842faff2f285',1,'cpplint::_CppLintState']]],
-  ['addtocharge',['addToCharge',['../classBattery.html#af20b927a6d29efa1aac61f00757fafdd',1,'Battery']]]
+  ['battery',['Battery',['../classBattery.html',1,'Battery'],['../classBattery.html#a36a6234c583e3b3506f4a77e3eb49989',1,'Battery::Battery()'],['../classBattery.html#a40c4232556ff1516ff06056d422fa641',1,'Battery::Battery(double initialCharge)']]],
+  ['battery_2ecpp',['battery.cpp',['../battery_8cpp.html',1,'']]],
+  ['battery_2eh',['battery.h',['../battery_8h.html',1,'']]]
 ];

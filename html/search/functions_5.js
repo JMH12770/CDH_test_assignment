@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['getcharge',['getCharge',['../classBattery.html#a8a21d21a6bcac4eede5ce0ff5e0f2a2b',1,'Battery']]],
-  ['getpowerlevel',['getPowerLevel',['../classPowerTeam.html#a99e4666d246fcc054940ff1eb06b789c',1,'PowerTeam']]]
+  ['setpowerlevel',['setPowerLevel',['../classPowerTeam.html#ac6b10fe5704b25e85dd75dcdbbb2d3c8',1,'PowerTeam']]],
+  ['subtractfromcharge',['subtractFromCharge',['../classBattery.html#a4cfef00a4bd5a31a66b5a20d06179e1c',1,'Battery']]]
 ];

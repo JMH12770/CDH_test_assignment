@@ -20,7 +20,7 @@ int main() {
     cout << "Initial Power Level: " << powerTeam.getPowerLevel() << "\n";
     cout << "Charging Battery" << "\n";
     tempBattery.addToCharge(powerTeam.getPowerLevel());
-    cout << "Battery Charged to: " <<tempBattery.getCharge() << "\n";
+    cout << "Battery Charged to: " << tempBattery.getCharge() << "\n";
 
     return 0;
 }
