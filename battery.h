@@ -3,8 +3,8 @@
  */
 
 // Copyright 2016 Joshua Hassler
-#ifndef _USR_CS_UNDERGRAD_2019_JHASSLER_CDH_TESTASSIGNMENT_BATTERY_H_
-#define _USR_CS_UNDERGRAD_2019_JHASSLER_CDH_TESTASSIGNMENT_BATTERY_H_
+#ifndef BATTERY_H_
+#define BATTERY_H_
 
 /*!
  * Stores the amount of charge in a battery and provides
@@ -22,4 +22,4 @@ class Battery {
   double charge;
 };
 
-#endif  // _USR_CS_UNDERGRAD_2019_JHASSLER_CDH_TESTASSIGNMENT_BATTERY_H_
+#endif  // BATTERY_H_
