@@ -37,3 +37,26 @@ void PowerTeam::setPowerLevel(double power) {
 double PowerTeam::getPowerLevel(void) {
     return powerLevel;
 }
+
+/*!
+ * Overloads the - operator to work with PowerTeam object. Returns the value of
+ * the powerLevel minus the given double
+ *
+ * @param value The value you are subtracting from powerLevel
+ * @return The value of powerLevel minus value
+ */
+double PowerTeam::operator-(double value) {
+    return this->getPowerLevel() - value;
+}
+
+/*!
+ * Overloads the = operator to work with PowerTeam object. Returns the value
+ * assigned to powerLevel.
+ *
+ * @param value The value to assign as the new powerLevel
+ * @return The value assigned to powerLevel
+ */
+double PowerTeam::operator=(double value) {
+    this->setPowerLevel(value);
+    return this->getPowerLevel();
+}

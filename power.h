@@ -3,8 +3,8 @@
  */
 
 // Copyright 2016 Joshua Hassler
-#ifndef _USR_CS_UNDERGRAD_2019_JHASSLER_CDH_TESTASSIGNMENT_POWER_H_
-#define _USR_CS_UNDERGRAD_2019_JHASSLER_CDH_TESTASSIGNMENT_POWER_H_
+#ifndef POWER_H_
+#define POWER_H_
 
 /*!
  * Stores the current power level of the power team
@@ -14,6 +14,8 @@ class PowerTeam {
  public:
   double getPowerLevel(void);
   void setPowerLevel(double power);
+  double operator-(double value);
+  double operator=(double value);
   PowerTeam();
   explicit PowerTeam(double power);
  private:
@@ -21,4 +23,4 @@ class PowerTeam {
   double powerLevel;
 };
 
-#endif  // _USR_CS_UNDERGRAD_2019_JHASSLER_CDH_TESTASSIGNMENT_POWER_H_
+#endif  // POWER_H_
