@@ -1,21 +1,36 @@
 \hypertarget{main_8cpp}{}\section{main.\+cpp File Reference}
 \label{main_8cpp}\index{main.\+cpp@{main.\+cpp}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
 {\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
 {\ttfamily \#include \char`\"{}./power.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}./battery.\+h\char`\"{}}\\*
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+\hypertarget{main_8cpp_a3e9c0b0cdea481b061d56d5cc5848962}{}void {\bfseries drain\+\_\+power} (std\+::vector$<$ \hyperlink{classPowerTeam}{Power\+Team} $>$ $\ast$\hyperlink{classBattery}{Battery})\label{main_8cpp_a3e9c0b0cdea481b061d56d5cc5848962}
+
+\item 
+\hypertarget{main_8cpp_ac5c3c5afc82984b230accd58ecc0fd17}{}void {\bfseries print\+\_\+battery} (std\+::vector$<$ \hyperlink{classPowerTeam}{Power\+Team} $>$ \hyperlink{classBattery}{Battery})\label{main_8cpp_ac5c3c5afc82984b230accd58ecc0fd17}
+
+\item 
 int \hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{main_8cpp_a2b3a30c8e86f014dc99bd71997a7bb25}{}unsigned int {\bfseries N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+D\+R\+A\+I\+N\+S} = 10\label{main_8cpp_a2b3a30c8e86f014dc99bd71997a7bb25}
+
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{main.\+cpp@{main.\+cpp}!main@{main}}
 \index{main@{main}!main.\+cpp@{main.\+cpp}}
-\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
-Simple driver to test interaction between \hyperlink{classPowerTeam}{Power\+Team} and \hyperlink{classBattery}{Battery} objects 
+)}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+This driver creates a \hyperlink{classBattery}{Battery} vector, charges the battery then attempts to drain power from it untill it is empty. 

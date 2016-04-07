@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['setpowerlevel',['setPowerLevel',['../classPowerTeam.html#ac6b10fe5704b25e85dd75dcdbbb2d3c8',1,'PowerTeam']]],
-  ['subtractfromcharge',['subtractFromCharge',['../classBattery.html#a4cfef00a4bd5a31a66b5a20d06179e1c',1,'Battery']]]
+  ['powerteam',['PowerTeam',['../classPowerTeam.html#ae8550db8d93ee0e0b0c93a1031b390e4',1,'PowerTeam::PowerTeam()'],['../classPowerTeam.html#ab7226fb28752547493ac664926240831',1,'PowerTeam::PowerTeam(double power)']]]
 ];

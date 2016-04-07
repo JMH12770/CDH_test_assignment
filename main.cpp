@@ -33,7 +33,7 @@ int main() {
 
     print_battery(Battery);
 
-    cout << "Draining battery: ";
+    cout << "Draining battery:\n";
 
     drain_power(&Battery);
 
@@ -54,7 +54,15 @@ void drain_power(std::vector<PowerTeam>* Battery) {
             if ((*Battery)[j] - static_cast<double>(number) >= 0) {
                 (*Battery)[j] = (*Battery)[j] - static_cast<double>(number);
                 number = 0;
-            } else if ((*Battery)[j] - static_cast<double>(number) < 0) {
+            } else if ((*Battery)[j] - static_cast<double>(number) < 0 &&
+                j != (*Battery).size() - 1) {
+                number = number - (*Battery)[j].getPowerLevel();
+                (*Battery)[j] = 0;
+            } else {
+                std::cout << "WARNING: Trying to pull " << number;
+                std::cout << " power when there is only ";
+                std::cout << (*Battery)[j].getPowerLevel() << " left!\n";
+                std::cout << "Pulling as much power as I can.\n";
                 number = number - (*Battery)[j].getPowerLevel();
                 (*Battery)[j] = 0;
             }

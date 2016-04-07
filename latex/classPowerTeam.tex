@@ -11,6 +11,10 @@ double \hyperlink{classPowerTeam_a99e4666d246fcc054940ff1eb06b789c}{get\+Power\+
 \item 
 void \hyperlink{classPowerTeam_ac6b10fe5704b25e85dd75dcdbbb2d3c8}{set\+Power\+Level} (double power)
 \item 
+double \hyperlink{classPowerTeam_ab712546e8ac56e23ecc35e685b89e6c0}{operator-\/} (double value)
+\item 
+double \hyperlink{classPowerTeam_ab412b91078aa2a42b3b5fcde70c413b1}{operator=} (double value)
+\item 
 \hyperlink{classPowerTeam_ae8550db8d93ee0e0b0c93a1031b390e4}{Power\+Team} ()
 \item 
 \hyperlink{classPowerTeam_ab7226fb28752547493ac664926240831}{Power\+Team} (double power)
@@ -21,20 +25,20 @@ void \hyperlink{classPowerTeam_ac6b10fe5704b25e85dd75dcdbbb2d3c8}{set\+Power\+Le
 Stores the current power level of the power team provides the ability to get and set the power level 
 
 \subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPowerTeam_ae8550db8d93ee0e0b0c93a1031b390e4}{}\index{Power\+Team@{Power\+Team}!Power\+Team@{Power\+Team}}
 \index{Power\+Team@{Power\+Team}!Power\+Team@{Power\+Team}}
-\index{Power\+Team@{Power\+Team}!Power\+Team@{Power\+Team}}
-\subsubsection[{\texorpdfstring{Power\+Team()}{PowerTeam()}}]{\setlength{\rightskip}{0pt plus 5cm}Power\+Team\+::\+Power\+Team (
+\subsubsection[{Power\+Team}]{\setlength{\rightskip}{0pt plus 5cm}Power\+Team\+::\+Power\+Team (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
-)}\hypertarget{classPowerTeam_ae8550db8d93ee0e0b0c93a1031b390e4}{}\label{classPowerTeam_ae8550db8d93ee0e0b0c93a1031b390e4}
-Creates a \hyperlink{classPowerTeam}{Power\+Team} object \index{Power\+Team@{Power\+Team}!Power\+Team@{Power\+Team}}
+)}\label{classPowerTeam_ae8550db8d93ee0e0b0c93a1031b390e4}
+Creates a \hyperlink{classPowerTeam}{Power\+Team} object \hypertarget{classPowerTeam_ab7226fb28752547493ac664926240831}{}\index{Power\+Team@{Power\+Team}!Power\+Team@{Power\+Team}}
 \index{Power\+Team@{Power\+Team}!Power\+Team@{Power\+Team}}
-\subsubsection[{\texorpdfstring{Power\+Team(double power)}{PowerTeam(double power)}}]{\setlength{\rightskip}{0pt plus 5cm}Power\+Team\+::\+Power\+Team (
+\subsubsection[{Power\+Team}]{\setlength{\rightskip}{0pt plus 5cm}Power\+Team\+::\+Power\+Team (
 \begin{DoxyParamCaption}
 \item[{double}]{power}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classPowerTeam_ab7226fb28752547493ac664926240831}{}\label{classPowerTeam_ab7226fb28752547493ac664926240831}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\label{classPowerTeam_ab7226fb28752547493ac664926240831}
 Creates a \hyperlink{classPowerTeam}{Power\+Team} object with a specified power level
 
 
@@ -45,25 +49,59 @@ Creates a \hyperlink{classPowerTeam}{Power\+Team} object with a specified power 
 
 
 \subsection{Member Function Documentation}
-\index{Power\+Team@{Power\+Team}!get\+Power\+Level@{get\+Power\+Level}}
+\hypertarget{classPowerTeam_a99e4666d246fcc054940ff1eb06b789c}{}\index{Power\+Team@{Power\+Team}!get\+Power\+Level@{get\+Power\+Level}}
 \index{get\+Power\+Level@{get\+Power\+Level}!Power\+Team@{Power\+Team}}
-\subsubsection[{\texorpdfstring{get\+Power\+Level(void)}{getPowerLevel(void)}}]{\setlength{\rightskip}{0pt plus 5cm}double Power\+Team\+::get\+Power\+Level (
+\subsubsection[{get\+Power\+Level}]{\setlength{\rightskip}{0pt plus 5cm}double Power\+Team\+::get\+Power\+Level (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
-)}\hypertarget{classPowerTeam_a99e4666d246fcc054940ff1eb06b789c}{}\label{classPowerTeam_a99e4666d246fcc054940ff1eb06b789c}
+)}\label{classPowerTeam_a99e4666d246fcc054940ff1eb06b789c}
 Gets the power level of the \hyperlink{classPowerTeam}{Power\+Team} object
 
 \begin{DoxyReturn}{Returns}
 The current power level of the object 
 \end{DoxyReturn}
-\index{Power\+Team@{Power\+Team}!set\+Power\+Level@{set\+Power\+Level}}
+\hypertarget{classPowerTeam_ab712546e8ac56e23ecc35e685b89e6c0}{}\index{Power\+Team@{Power\+Team}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Power\+Team@{Power\+Team}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}double Power\+Team\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{classPowerTeam_ab712546e8ac56e23ecc35e685b89e6c0}
+Overloads the -\/ operator to work with \hyperlink{classPowerTeam}{Power\+Team} object. Returns the value of the power\+Level minus the given double
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value you are subtracting from power\+Level \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of power\+Level minus value 
+\end{DoxyReturn}
+\hypertarget{classPowerTeam_ab412b91078aa2a42b3b5fcde70c413b1}{}\index{Power\+Team@{Power\+Team}!operator=@{operator=}}
+\index{operator=@{operator=}!Power\+Team@{Power\+Team}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}double Power\+Team\+::operator= (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{classPowerTeam_ab412b91078aa2a42b3b5fcde70c413b1}
+Overloads the = operator to work with \hyperlink{classPowerTeam}{Power\+Team} object. Returns the value assigned to power\+Level.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to assign as the new power\+Level \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value assigned to power\+Level 
+\end{DoxyReturn}
+\hypertarget{classPowerTeam_ac6b10fe5704b25e85dd75dcdbbb2d3c8}{}\index{Power\+Team@{Power\+Team}!set\+Power\+Level@{set\+Power\+Level}}
 \index{set\+Power\+Level@{set\+Power\+Level}!Power\+Team@{Power\+Team}}
-\subsubsection[{\texorpdfstring{set\+Power\+Level(double power)}{setPowerLevel(double power)}}]{\setlength{\rightskip}{0pt plus 5cm}void Power\+Team\+::set\+Power\+Level (
+\subsubsection[{set\+Power\+Level}]{\setlength{\rightskip}{0pt plus 5cm}void Power\+Team\+::set\+Power\+Level (
 \begin{DoxyParamCaption}
 \item[{double}]{power}
 \end{DoxyParamCaption}
-)}\hypertarget{classPowerTeam_ac6b10fe5704b25e85dd75dcdbbb2d3c8}{}\label{classPowerTeam_ac6b10fe5704b25e85dd75dcdbbb2d3c8}
+)}\label{classPowerTeam_ac6b10fe5704b25e85dd75dcdbbb2d3c8}
 Sets the power level for the object
 
 
