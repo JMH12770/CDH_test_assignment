@@ -60,3 +60,14 @@ double PowerTeam::operator=(double value) {
     this->setPowerLevel(value);
     return this->getPowerLevel();
 }
+
+/*!
+ * Overloads the + operator to work with PowerTeam object. Returns the value of
+ * the powerLevel plus the given double
+ *
+ * @param value The value you are adding to powerLevel
+ * @return The value of powerLevel plus value
+ */
+double PowerTeam::operator+(double value) {
+    return this->getPowerLevel() + value;
+}

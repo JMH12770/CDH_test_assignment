@@ -94,19 +94,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a57efc0df9a5050eb42916f260d509e45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBattery.html#a57efc0df9a5050eb42916f260d509e45">drain_power</a> (void)</td></tr>
+<tr class="separator:a57efc0df9a5050eb42916f260d509e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58d8e510370111a2e374072ad4ff5d2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBattery.html#a58d8e510370111a2e374072ad4ff5d2d">add_power</a> (void)</td></tr>
+<tr class="separator:a58d8e510370111a2e374072ad4ff5d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a21d21a6bcac4eede5ce0ff5e0f2a2b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBattery.html#a8a21d21a6bcac4eede5ce0ff5e0f2a2b">getCharge</a> (void)</td></tr>
 <tr class="separator:a8a21d21a6bcac4eede5ce0ff5e0f2a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af20b927a6d29efa1aac61f00757fafdd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBattery.html#af20b927a6d29efa1aac61f00757fafdd">addToCharge</a> (double power)</td></tr>
-<tr class="separator:af20b927a6d29efa1aac61f00757fafdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cfef00a4bd5a31a66b5a20d06179e1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBattery.html#a4cfef00a4bd5a31a66b5a20d06179e1c">subtractFromCharge</a> (double power)</td></tr>
-<tr class="separator:a4cfef00a4bd5a31a66b5a20d06179e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1529b4d2be76aec386f0354075077e7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBattery.html#a1529b4d2be76aec386f0354075077e7e">print_battery</a> (void)</td></tr>
+<tr class="separator:a1529b4d2be76aec386f0354075077e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36a6234c583e3b3506f4a77e3eb49989"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBattery.html#a36a6234c583e3b3506f4a77e3eb49989">Battery</a> ()</td></tr>
 <tr class="separator:a36a6234c583e3b3506f4a77e3eb49989"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40c4232556ff1516ff06056d422fa641"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBattery.html#a40c4232556ff1516ff06056d422fa641">Battery</a> (double initialCharge)</td></tr>
-<tr class="separator:a40c4232556ff1516ff06056d422fa641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0ddbf3277d66a0318f3352d000eb7c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBattery.html#af0ddbf3277d66a0318f3352d000eb7c4">Battery</a> (double initialCharge, double number_of_batteries)</td></tr>
+<tr class="separator:af0ddbf3277d66a0318f3352d000eb7c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Stores the amount of charge in a battery and provides methods to add charge, subtract charge, and get charge </p>
+<div class="textblock"><p>Stors a vector of batteries, forming an array. Provides methods to print a picture of the array, get the total charge, subtract power, and add power to the array. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a36a6234c583e3b3506f4a77e3eb49989"></a>
 <div class="memitem">
@@ -121,35 +123,38 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a battery object </p>
+<p>Creates a battery object with default charge level and default number of <a class="el" href="classPowerTeam.html">PowerTeam</a> objects. </p>
 
 </div>
 </div>
-<a class="anchor" id="a40c4232556ff1516ff06056d422fa641"></a>
+<a class="anchor" id="af0ddbf3277d66a0318f3352d000eb7c4"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Battery::Battery </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>initialCharge</em></td><td>)</td>
+          <td class="paramname"><em>initialCharge</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>number_of_batteries</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>Creates a bettery object with a charge</p>
+<p>Creates a bettery object with a specified charge and a specified number of <a class="el" href="classPowerTeam.html">PowerTeam</a> objects.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">initialCharge</td><td>The initial charge of the battery </td></tr>
+    <tr><td class="paramname">initialCharge</td><td>The initial charge of each <a class="el" href="classPowerTeam.html">PowerTeam</a> object </td></tr>
+    <tr><td class="paramname">number_of_batteries</td><td>The number of <a class="el" href="classPowerTeam.html">PowerTeam</a> objects to be stored in the vector. </td></tr>
   </table>
   </dd>
 </dl>
@@ -157,26 +162,37 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="af20b927a6d29efa1aac61f00757fafdd"></a>
+<a class="anchor" id="a58d8e510370111a2e374072ad4ff5d2d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Battery::addToCharge </td>
+          <td class="memname">void Battery::add_power </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>power</em></td><td>)</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Adds a specified amount of charge to the battery</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">power</td><td>The amount of charge to add. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Adds power to the battery array untill it can't or it has iterated the number of times specified by NUMBER_OF_DRAINS. </p>
+
+</div>
+</div>
+<a class="anchor" id="a57efc0df9a5050eb42916f260d509e45"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Battery::drain_power </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Drains power from the battery array untill it can't or it has iterated the number of times specified by NUMBER_OF_DRAINS. </p>
 
 </div>
 </div>
@@ -193,31 +209,25 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns how much charge is in the battery</p>
-<dl class="section return"><dt>Returns</dt><dd>The amount of charge in the battery. </dd></dl>
+<p>Returns how much charge is in the battery array</p>
+<dl class="section return"><dt>Returns</dt><dd>The amount of charge in the battery array. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a4cfef00a4bd5a31a66b5a20d06179e1c"></a>
+<a class="anchor" id="a1529b4d2be76aec386f0354075077e7e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Battery::subtractFromCharge </td>
+          <td class="memname">void Battery::print_battery </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>power</em></td><td>)</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Subtracts a specified amount of charge from the battery</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">power</td><td>The amount of charge to subtract </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Prints a ASCII view of the battery </p>
 
 </div>
 </div>

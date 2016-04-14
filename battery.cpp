@@ -6,43 +6,137 @@
 
 #include "./battery.h"
 
-/*!
- * Creates a battery object
- */
-Battery::Battery(void) {}
+unsigned int NUMBER_OF_DRAINS = 10;  // Set to how many times to drain batteries
 
 /*!
- * Creates a bettery object with a charge
- *
- * @param initialCharge The initial charge of the battery
+ * Creates a battery object with default charge level and default number of
+ * PowerTeam objects.
  */
-Battery::Battery(double initialCharge) {
-     charge = initialCharge;
+Battery::Battery(void) {
+    PowerTeam powerTeam(10.0);
+    int i;
+
+    cells = 5;
+    max_charge = 10.0;
+    for (i = 0; i < cells; i++) {
+        battery_array.push_back(powerTeam);
+    }
 }
 
 /*!
- * Returns how much charge is in the battery
+ * Creates a bettery object with a specified charge and a specified number of
+ * PowerTeam objects.
  *
- * @return The amount of charge in the battery.
+ * @param initialCharge The initial charge of each PowerTeam object
+ * @param number_of_batteries The number of PowerTeam objects to be stored in
+ * the vector.
+ */
+Battery::Battery(double initialCharge, double number_of_batteries) {
+    PowerTeam powerTeam(initialCharge);
+    int i;
+
+    cells = number_of_batteries;
+    max_charge = initialCharge;
+    for (i = 0; i < cells; i++) {
+        battery_array.push_back(powerTeam);
+    }
+}
+
+/*!
+ * Returns how much charge is in the battery array
+ *
+ * @return The amount of charge in the battery array.
  */
 double Battery::getCharge(void) {
-     return charge;
+     double sum = 0;
+     int i;
+
+     for (i = 0; i < cells; i++) {
+         sum += battery_array[i].getPowerLevel();
+     }
+
+     return sum;
 }
 
 /*!
- * Adds a specified amount of charge to the battery
- *
- * @param power The amount of charge to add.
+ * Drains power from the battery array untill it can't or it has iterated the
+ * number of times specified by NUMBER_OF_DRAINS.
  */
-void Battery::addToCharge(double power) {
-    charge += power;
+void Battery::drain_power(void) {
+    int number;
+    unsigned int i, j;
+    unsigned int seed = time(NULL);
+
+    for (i = 0; i < NUMBER_OF_DRAINS && number == 0; i++) {
+        number = (rand_r(&seed) % 9) + 1;
+
+        for (j = 0; j < battery_array.size() && number >= 0; j++) {
+            if (battery_array[j] - static_cast<double>(number) >= 0) {
+                battery_array[j] = battery_array[j]-static_cast<double>(number);
+                number = 0;
+            } else if (battery_array[j] - static_cast<double>(number) < 0 &&
+                j != battery_array.size() - 1) {
+                number = number - battery_array[j].getPowerLevel();
+                battery_array[j] = 0;
+            } else {
+                std::cout << "WARNING: Trying to pull " << number
+                << " power when there is only "
+                << battery_array[j].getPowerLevel()
+                << " left!\n" << "Pulling as much power as I can.\n";
+                number = number - battery_array[j].getPowerLevel();
+                battery_array[j] = 0;
+            }
+        }
+        if (number != 0) {
+            std:: cout << "WARNING! Batteries are depleated!\n";
+        }
+    }
 }
 
 /*!
- * Subtracts a specified amount of charge from the battery
- *
- * @param power The amount of charge to subtract
+ * Adds power to the battery array untill it can't or it has iterated the
+ * number of times specified by NUMBER_OF_DRAINS.
  */
-void Battery::subtractFromCharge(double power) {
-    charge -= power;
+void Battery::add_power(void) {
+    int number = 0;
+    unsigned int i, j;
+    unsigned int seed = time(NULL);
+
+    for (i = 0; i < NUMBER_OF_DRAINS && number == 0; i++) {
+        number = (rand_r(&seed) % 9) + 1;
+
+        for (j = 0; j < battery_array.size() && number != 0;) {
+            if (battery_array[j] + static_cast<double>(number) < max_charge) {
+                battery_array[j] = battery_array[j] + (number);
+                number = 0;
+            } else if (battery_array[j] +
+                static_cast<double>(number)== max_charge) {
+                battery_array[j] = max_charge;
+                j++;
+                number = 0;
+            } else if (battery_array[j] +
+                static_cast<double>(number) > max_charge) {
+                number = number + (battery_array[j] - max_charge);
+                battery_array[j] = max_charge;
+                j++;
+            }
+        }
+    }
+    if (number != 0) {
+        std::cout << "WARNING! Tryed to overcharge by " << number << "\n";
+    }
+}
+
+/*!
+ * Prints a ASCII view of the battery
+ */
+void Battery::print_battery(void) {
+    using std::cout;
+    int i;
+    cout << "Showing charge of battery:\n---------\n";
+    for (i = 0; i < 5; i++) {
+        cout << "|" << std::setw(6) << battery_array[i].getPowerLevel()
+        << " |\n";
+    }
+    cout << "---------\n";
 }

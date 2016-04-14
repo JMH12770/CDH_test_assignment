@@ -7,20 +7,22 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \hyperlink{classBattery_a57efc0df9a5050eb42916f260d509e45}{drain\+\_\+power} (void)
+\item 
+void \hyperlink{classBattery_a58d8e510370111a2e374072ad4ff5d2d}{add\+\_\+power} (void)
+\item 
 double \hyperlink{classBattery_a8a21d21a6bcac4eede5ce0ff5e0f2a2b}{get\+Charge} (void)
 \item 
-void \hyperlink{classBattery_af20b927a6d29efa1aac61f00757fafdd}{add\+To\+Charge} (double power)
-\item 
-void \hyperlink{classBattery_a4cfef00a4bd5a31a66b5a20d06179e1c}{subtract\+From\+Charge} (double power)
+void \hyperlink{classBattery_a1529b4d2be76aec386f0354075077e7e}{print\+\_\+battery} (void)
 \item 
 \hyperlink{classBattery_a36a6234c583e3b3506f4a77e3eb49989}{Battery} ()
 \item 
-\hyperlink{classBattery_a40c4232556ff1516ff06056d422fa641}{Battery} (double initial\+Charge)
+\hyperlink{classBattery_af0ddbf3277d66a0318f3352d000eb7c4}{Battery} (double initial\+Charge, double number\+\_\+of\+\_\+batteries)
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Stores the amount of charge in a battery and provides methods to add charge, subtract charge, and get charge 
+Stors a vector of batteries, forming an array. Provides methods to print a picture of the array, get the total charge, subtract power, and add power to the array. 
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{classBattery_a36a6234c583e3b3506f4a77e3eb49989}{}\index{Battery@{Battery}!Battery@{Battery}}
@@ -30,64 +32,60 @@ Stores the amount of charge in a battery and provides methods to add charge, sub
 \item[{void}]{}
 \end{DoxyParamCaption}
 )}\label{classBattery_a36a6234c583e3b3506f4a77e3eb49989}
-Creates a battery object \hypertarget{classBattery_a40c4232556ff1516ff06056d422fa641}{}\index{Battery@{Battery}!Battery@{Battery}}
+Creates a battery object with default charge level and default number of \hyperlink{classPowerTeam}{Power\+Team} objects. \hypertarget{classBattery_af0ddbf3277d66a0318f3352d000eb7c4}{}\index{Battery@{Battery}!Battery@{Battery}}
 \index{Battery@{Battery}!Battery@{Battery}}
 \subsubsection[{Battery}]{\setlength{\rightskip}{0pt plus 5cm}Battery\+::\+Battery (
 \begin{DoxyParamCaption}
-\item[{double}]{initial\+Charge}
+\item[{double}]{initial\+Charge, }
+\item[{double}]{number\+\_\+of\+\_\+batteries}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [explicit]}}\label{classBattery_a40c4232556ff1516ff06056d422fa641}
-Creates a bettery object with a charge
+)}\label{classBattery_af0ddbf3277d66a0318f3352d000eb7c4}
+Creates a bettery object with a specified charge and a specified number of \hyperlink{classPowerTeam}{Power\+Team} objects.
 
 
 \begin{DoxyParams}{Parameters}
-{\em initial\+Charge} & The initial charge of the battery \\
+{\em initial\+Charge} & The initial charge of each \hyperlink{classPowerTeam}{Power\+Team} object \\
+\hline
+{\em number\+\_\+of\+\_\+batteries} & The number of \hyperlink{classPowerTeam}{Power\+Team} objects to be stored in the vector. \\
 \hline
 \end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
-\hypertarget{classBattery_af20b927a6d29efa1aac61f00757fafdd}{}\index{Battery@{Battery}!add\+To\+Charge@{add\+To\+Charge}}
-\index{add\+To\+Charge@{add\+To\+Charge}!Battery@{Battery}}
-\subsubsection[{add\+To\+Charge}]{\setlength{\rightskip}{0pt plus 5cm}void Battery\+::add\+To\+Charge (
+\hypertarget{classBattery_a58d8e510370111a2e374072ad4ff5d2d}{}\index{Battery@{Battery}!add\+\_\+power@{add\+\_\+power}}
+\index{add\+\_\+power@{add\+\_\+power}!Battery@{Battery}}
+\subsubsection[{add\+\_\+power}]{\setlength{\rightskip}{0pt plus 5cm}void Battery\+::add\+\_\+power (
 \begin{DoxyParamCaption}
-\item[{double}]{power}
+\item[{void}]{}
 \end{DoxyParamCaption}
-)}\label{classBattery_af20b927a6d29efa1aac61f00757fafdd}
-Adds a specified amount of charge to the battery
-
-
-\begin{DoxyParams}{Parameters}
-{\em power} & The amount of charge to add. \\
-\hline
-\end{DoxyParams}
-\hypertarget{classBattery_a8a21d21a6bcac4eede5ce0ff5e0f2a2b}{}\index{Battery@{Battery}!get\+Charge@{get\+Charge}}
+)}\label{classBattery_a58d8e510370111a2e374072ad4ff5d2d}
+Adds power to the battery array untill it can\textquotesingle{}t or it has iterated the number of times specified by N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+D\+R\+A\+I\+N\+S. \hypertarget{classBattery_a57efc0df9a5050eb42916f260d509e45}{}\index{Battery@{Battery}!drain\+\_\+power@{drain\+\_\+power}}
+\index{drain\+\_\+power@{drain\+\_\+power}!Battery@{Battery}}
+\subsubsection[{drain\+\_\+power}]{\setlength{\rightskip}{0pt plus 5cm}void Battery\+::drain\+\_\+power (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classBattery_a57efc0df9a5050eb42916f260d509e45}
+Drains power from the battery array untill it can\textquotesingle{}t or it has iterated the number of times specified by N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+D\+R\+A\+I\+N\+S. \hypertarget{classBattery_a8a21d21a6bcac4eede5ce0ff5e0f2a2b}{}\index{Battery@{Battery}!get\+Charge@{get\+Charge}}
 \index{get\+Charge@{get\+Charge}!Battery@{Battery}}
 \subsubsection[{get\+Charge}]{\setlength{\rightskip}{0pt plus 5cm}double Battery\+::get\+Charge (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
 )}\label{classBattery_a8a21d21a6bcac4eede5ce0ff5e0f2a2b}
-Returns how much charge is in the battery
+Returns how much charge is in the battery array
 
 \begin{DoxyReturn}{Returns}
-The amount of charge in the battery. 
+The amount of charge in the battery array. 
 \end{DoxyReturn}
-\hypertarget{classBattery_a4cfef00a4bd5a31a66b5a20d06179e1c}{}\index{Battery@{Battery}!subtract\+From\+Charge@{subtract\+From\+Charge}}
-\index{subtract\+From\+Charge@{subtract\+From\+Charge}!Battery@{Battery}}
-\subsubsection[{subtract\+From\+Charge}]{\setlength{\rightskip}{0pt plus 5cm}void Battery\+::subtract\+From\+Charge (
+\hypertarget{classBattery_a1529b4d2be76aec386f0354075077e7e}{}\index{Battery@{Battery}!print\+\_\+battery@{print\+\_\+battery}}
+\index{print\+\_\+battery@{print\+\_\+battery}!Battery@{Battery}}
+\subsubsection[{print\+\_\+battery}]{\setlength{\rightskip}{0pt plus 5cm}void Battery\+::print\+\_\+battery (
 \begin{DoxyParamCaption}
-\item[{double}]{power}
+\item[{void}]{}
 \end{DoxyParamCaption}
-)}\label{classBattery_a4cfef00a4bd5a31a66b5a20d06179e1c}
-Subtracts a specified amount of charge from the battery
-
-
-\begin{DoxyParams}{Parameters}
-{\em power} & The amount of charge to subtract \\
-\hline
-\end{DoxyParams}
-
+)}\label{classBattery_a1529b4d2be76aec386f0354075077e7e}
+Prints a A\+S\+C\+I\+I view of the battery 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

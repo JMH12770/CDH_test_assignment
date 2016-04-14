@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['powerteam',['PowerTeam',['../classPowerTeam.html#ae8550db8d93ee0e0b0c93a1031b390e4',1,'PowerTeam::PowerTeam()'],['../classPowerTeam.html#ab7226fb28752547493ac664926240831',1,'PowerTeam::PowerTeam(double power)']]]
+  ['operator_2b',['operator+',['../classPowerTeam.html#a69da11ff9fd3b263ba4420c547b0a4ef',1,'PowerTeam']]],
+  ['operator_2d',['operator-',['../classPowerTeam.html#ab712546e8ac56e23ecc35e685b89e6c0',1,'PowerTeam']]],
+  ['operator_3d',['operator=',['../classPowerTeam.html#ab412b91078aa2a42b3b5fcde70c413b1',1,'PowerTeam']]]
 ];

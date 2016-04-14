@@ -4,17 +4,9 @@
 
 // Copyright 2016 Joshua Hassler
 
-#include <stdlib.h>
 #include <iostream>
-#include <vector>
-#include <iomanip>
 #include "./power.h"
 #include "./battery.h"
-
-unsigned int NUMBER_OF_DRAINS = 10;  // Set to how many times to drain batteries
-
-void drain_power(std::vector<PowerTeam>* Battery);
-void print_battery(std::vector<PowerTeam> Battery);
 
 /*!
  * This driver creates a Battery vector, charges the battery then attempts to
@@ -22,63 +14,21 @@ void print_battery(std::vector<PowerTeam> Battery);
  */
 int main() {
     using std::cout;
-    using std::vector;
-    int i;
-    vector<PowerTeam> Battery;
-    PowerTeam powerTeam(10.0);
+    Battery battery_array(10, 5);
 
-    for (i = 0; i < 5; i++) {
-        Battery.push_back(powerTeam);
-    }
-
-    print_battery(Battery);
+    battery_array.print_battery();
 
     cout << "Draining battery:\n";
 
-    drain_power(&Battery);
+    battery_array.drain_power();
 
-    print_battery(Battery);
+    battery_array.print_battery();
+
+    cout << "Charging battery:\n";
+
+    battery_array.add_power();
+
+    battery_array.print_battery();
 
     return 0;
-}
-
-void drain_power(std::vector<PowerTeam>* Battery) {
-    int number;
-    unsigned int i, j;
-    unsigned int seed = time(NULL);
-
-    for (i = 0; i < NUMBER_OF_DRAINS && number == 0; i++) {
-        number = (rand_r(&seed) % 9) + 1;
-
-        for (j = 0; j < (*Battery).size() && number >= 0; j++) {
-            if ((*Battery)[j] - static_cast<double>(number) >= 0) {
-                (*Battery)[j] = (*Battery)[j] - static_cast<double>(number);
-                number = 0;
-            } else if ((*Battery)[j] - static_cast<double>(number) < 0 &&
-                j != (*Battery).size() - 1) {
-                number = number - (*Battery)[j].getPowerLevel();
-                (*Battery)[j] = 0;
-            } else {
-                std::cout << "WARNING: Trying to pull " << number;
-                std::cout << " power when there is only ";
-                std::cout << (*Battery)[j].getPowerLevel() << " left!\n";
-                std::cout << "Pulling as much power as I can.\n";
-                number = number - (*Battery)[j].getPowerLevel();
-                (*Battery)[j] = 0;
-            }
-        }
-        if (number != 0) {
-            std:: cout << "WARNING! Batteries are depleated!\n";
-        }
-    }
-}
-
-void print_battery(std::vector<PowerTeam> Battery ) {
-using std::cout;
-        int i;
-    cout << "Showing charge of battery:\n---------\n";
-    for (i = 0; i < 5; i++) {
-        cout << "|" << std::setw(6) << Battery[i].getPowerLevel() << " |\n";
-    }
-    cout << "---------\n";
 }

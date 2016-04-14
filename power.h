@@ -15,6 +15,7 @@ class PowerTeam {
   double getPowerLevel(void);
   void setPowerLevel(double power);
   double operator-(double value);
+  double operator+(double value);
   double operator=(double value);
   PowerTeam();
   explicit PowerTeam(double power);
