@@ -1,7 +1,22 @@
-# Linter files
-powerlint
-lineReader
-cpplint.py
-output.dat
-*.o
+# My Files
 power_driver
+html
+latex
+
+# output files
+*.out
+*.o
+*.gch
+
+# linter files
+*.dat
+*.py
+lineReader
+powerlint
+
+# cmake files
+cmake_install.cmake
+CMakeFiles/
+CMakeCache.txt
+Makefile
+
