@@ -31,21 +31,30 @@
  */
 int main() {
     using std::cout;
-    Battery battery_array(10, 5);
+    using std::endl;
+    using std::cin;
+    char* c;
 
-    battery_array.print_battery();
+    cout << "Would you like to run a charge cycle? (y/n): ";
+    cin >> c;
 
-    cout << "Draining battery:\n";
+    if (c = 'y' || c = 'Y') {
+        Battery battery_array(10, 5);
 
-    battery_array.drain_power();
+        battery_array.print_battery();
 
-    battery_array.print_battery();
+        cout << "Draining battery:" << endl;
 
-    cout << "Charging battery:\n";
+        battery_array.drain_power();
 
-    battery_array.add_power();
+        battery_array.print_battery();
 
-    battery_array.print_battery();
+        cout << "Charging battery:" << endl;
+
+        battery_array.add_power();
+
+        battery_array.print_battery();
+    }
 
     return 0;
 }
